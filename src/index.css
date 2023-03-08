@@ -3,6 +3,60 @@
   padding: 0;
  box-sizing: border-box;
 }
+:root{
+  --black-color:#1F1F1F;
+  --orange-color: #FF9E2C;
+  --white-color: #fff; 
+  --pink-color: #C4C4C4; 
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(./assests/fonts/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: Gilroy-Heavy;
+  src: url(./assests/fonts/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(./assests/fonts/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(./assests/fonts/Gilroy-Medium.ttf
+}
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url(./assests/fonts/Gilroy-Regular.ttf);
+}
+
 h1{
-  font-size: 76px;
+  font-size: 70px;
+  font-family: Gilroy-Bold;
+}
+h2{
+  font-size: 55px;
+  font-family: Gilroy-Bold;
+}
+h3{
+  font-size: 44px;;
+}
+h4{
+  font-size: 35px;
+}
+h5{
+  font-size: 25px;
+}
+h6{
+  font-size: 20px;
+}
+a{
+  font-size: 16px;
+  font-family: Gilroy-Medium;
+}
+.small{
+  font-size: 18px;
+}
+p{
+  font-size: 20px;
 }

@@ -1,0 +1,18 @@
+.navCenter{
+    margin: 0 auto;
+    gap: 30px;
+}
+.active{
+    color: var(--black-color);
+    font-size: 18px;
+    position: relative;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: var(--orange-color);
+    top: 75%;
+    left: 17%;
+}
