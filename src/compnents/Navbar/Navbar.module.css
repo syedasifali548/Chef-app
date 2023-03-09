@@ -2,6 +2,15 @@
     margin: 0 auto;
     gap: 30px;
 }
+.navCenter a{
+    text-decoration: none;
+    color: var(--pink-color);
+}
+.navLeft a{
+    text-decoration: none;
+    color: var(--pink-color);
+    margin-left: 14px;
+}
 .active{
     color: var(--black-color);
     font-size: 18px;
@@ -13,6 +22,24 @@
     width: 40px;
     height: 4px;
     background-color: var(--orange-color);
-    top: 75%;
-    left: 17%;
+    top: 80%;
+    left: 12%;
+}
+@media(max-width:991.99px){
+    .navCenter{
+       text-align: center;
+    }
+    .active::after{
+        top: 81%;
+        left: 44%;
+    }
+    .navLeft a{
+        margin-left: unset;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .navCenter{
+        margin: 0 auto;
+        gap: 10px;
+    }
 }

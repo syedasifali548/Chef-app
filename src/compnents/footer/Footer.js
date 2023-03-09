@@ -12,7 +12,7 @@ const Footer = () => {
    <footer className={styles.footer}>
     <Container>
 
-    <Row>
+    <Row className={styles.footerRow}>
         <Col lg={3} md={6} sm={12}>
             <div className={styles.footer_logo}>
                   <img src={footerLogo} alt="footerLogo" className='img-fluid'/>

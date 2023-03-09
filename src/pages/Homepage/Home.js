@@ -89,7 +89,7 @@ const Home = () => {
                 <img src={banner} alt="banner" className="img-fluid" />
               </div>
             </Col>
-            <Col md={6}>
+            <Col lg={8} md={10} sm={12}>
               <div className={styles.input_wrapper}>
                 <div className={styles.input_groups}>
                   <label for="start">
@@ -163,7 +163,7 @@ const Home = () => {
                     </ul>
                   </div>
                 </Col>
-                <Col md={5}>
+                <Col md={5} sm={12}>
                   <div className={styles.happy_customers}>
                     <p>Our happy customers</p>
                     <div className={styles.starsRating}>
@@ -179,14 +179,14 @@ const Home = () => {
                     
                   </div>
                 </Col>
-                <Col md={3}>
+                <Col md={3} sm={12}>
                     <div className={styles.visa_img}>
                     <img src={visa} alt="visa" className="img-fluid" />
                     </div>
                 </Col>
               </Row>
             </Col>
-            <Col md={6}>
+            <Col lg={4} md={2} sm={12}>
               <div className={styles.forward_cricle}>
                 <MdOutlineKeyboardArrowRight color="#fff" size={40} />
               </div>
@@ -202,12 +202,12 @@ const Home = () => {
 <section className={styles.sectTwo}>
   <Container>
     <Row>
-        <Col md={3}>
+        <Col md={3} sm={12}>
             <div className={styles.mobileImg_Wrapper}>
                 <img src={mobile} alt="mobile" className="img-fluid"/>
             </div>
         </Col>
-        <Col md={9}>
+        <Col md={9} sm={12}>
             <div className={styles.download_app}>
                 <h3>Download our Mobile App</h3>
                 <div className={styles.apps_group}>
@@ -227,7 +227,7 @@ const Home = () => {
   <Container>
 
     <Row>
-        <Col md={3}>
+        <Col lg={3} md={4} sm={12}>
             <div className={styles.popular_sidhes_heading}>
                 <h3>Our Most 
                   <span style={{color:"#FF9E2C"}}>
@@ -239,7 +239,7 @@ const Home = () => {
             </div>
 
         </Col>
-        <Col md={9}>
+        <Col lg={9} md={8} sm={12}>
             <DishSwipper slidedata={slidedata}/>
         </Col>
     </Row>

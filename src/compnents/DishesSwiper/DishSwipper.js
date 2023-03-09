@@ -12,9 +12,9 @@ const DishSwipper = ({ slidedata }) => {
       <Swiper
         slidesPerView={3}
         spaceBetween={50}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         breakpoints={{
           // when window width is >= 320px
           320: {
@@ -28,11 +28,11 @@ const DishSwipper = ({ slidedata }) => {
           },
           // when window width is >= 640px
           768: {
-            slidesPerView: 3,
-            spaceBetween: 24,
+            slidesPerView: 2,
+            spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 32,
             slidesPerGroup: 1,
           },

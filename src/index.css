@@ -7,7 +7,7 @@
   --black-color:#1F1F1F;
   --orange-color: #FF9E2C;
   --white-color: #fff; 
-  --pink-color: #C4C4C4; 
+  --pink-color: #ac9c9c; 
 }
 @font-face {
   font-family: Gilroy-Bold;
@@ -59,4 +59,83 @@ a{
 }
 p{
   font-size: 20px;
+}
+@media(max-width:1040.99px){
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 40px;
+    font-family: Gilroy-Bold;
+  }
+  h3{
+    font-size: 35px;;
+  }
+  h4{
+    font-size: 28px;
+  }
+  h5{
+    font-size: 22px;
+  }
+  h6{
+    font-size: 18px;
+  }
+  .small{
+    font-size: 16px;
+  }
+  p{
+    font-size: 17px;
+  }
+}
+@media(max-width:767.99px){
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 26px;;
+  }
+  h4{
+    font-size: 22px;
+  }
+  h5{
+    font-size: 19px;
+  }
+  h6{
+    font-size: 16px;
+  }
+  .small{
+    font-size: 14px;
+  }
+  p{
+    font-size: 15px;
+  }
+}
+@media(max-width:480.99px){
+  h1{
+    font-size: 35px;
+  }
+  h2{
+    font-size: 26px;
+  }
+  h3{
+    font-size: 23px;;
+  }
+  h4{
+    font-size: 20px;
+  }
+  h5{
+    font-size: 17px;
+  }
+  h6{
+    font-size: 15px;
+  }
+  .small{
+    font-size: 12px;
+  }
+  p{
+    font-size: 14px;
+  }
 }

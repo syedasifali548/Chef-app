@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assests/images/logo.png'
 import styles from './Navbar.module.css'
-import { Link } from "react-router-dom";
+import { Link,NavLink  } from "react-router-dom";
 import {FiUser} from 'react-icons/fi'
 const NavbarComp = () => {
   return (
@@ -17,23 +17,22 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className={`me-auto ${styles.navCenter}`}>
-            {/* {} */}
-            <Nav.Link to="/" className={styles.active}>Home</Nav.Link>
-            <Nav.Link to="/works">How it works</Nav.Link>
-            <Nav.Link to="/our-chefs">Our Chefs</Nav.Link>
-            <Nav.Link to="/books">Books</Nav.Link>
+            <Link to="/" className={styles.active}>Home</Link>
+            <Link to="/works">How it works</Link>
+            <Link to="/shefs">Our Chefs</Link>
+            <Link to="/book ">Books</Link>
         
           </Nav>
-          <Nav>
-            <Nav.Link href="#signup">
+          <Nav className={styles.navLeft}>
+            <Link to="/signup">
               <span><FiUser
                style={{marginLeft:'15px'}}
               size={20}
               /></span>
-              Sign up</Nav.Link>
-            <Nav.Link eventKey={2} href="#login">
+              Sign up</Link>
+            <Link eventKey={2} to="/login">
              Login
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

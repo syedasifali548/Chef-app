@@ -35,3 +35,8 @@
     height: 30px;
     gap: 8px;
 }
+/* @media(max-width:480.99px){
+    .imagesSlide_wrapper{
+      width: 100%;
+  }
+  } */
