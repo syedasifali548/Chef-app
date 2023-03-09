@@ -210,3 +210,55 @@ color: var(--pink-color);
    letter-spacing: 2px;
 
 }
+.categories_section{
+    background-color: #F8F8F8;
+    margin: 40px 0;
+    padding: 50px 0;
+}
+.catg_imgs{
+    position: relative;
+}
+.catg_imgs h6{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transform: translate(7rem, 17rem);
+    color: var(--white-color);
+    font-family: Gilroy-Bold;
+}
+.catg_imgs img{
+    margin-bottom: 20px;
+    height: 340px;
+}
+.catgHeading h3{
+    font-family: Gilroy-Bold;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+.catgHeading h3::before{
+    font-family: Gilroy-Bold;
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: var(--black-color);    
+    top: 50%;
+    left: -4%;
+}
+.popular_sidhes_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    text-align: start;
+    align-items: baseline;
+}
+.primary_btn{
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    font-family: Gilroy-Medium;
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+}

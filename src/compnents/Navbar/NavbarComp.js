@@ -12,7 +12,7 @@ const NavbarComp = () => {
      <Navbar collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand to="/">
-           <img src={logo} alt="logo" />
+           <img src={logo} alt="logo" className='img-fluid' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

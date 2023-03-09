@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import styles from "./Home.module.css";
 import banner from "../../assests/images/banner.png";
 import pic1 from "../../assests/images/pic1.png";
@@ -10,7 +10,13 @@ import visa from "../../assests/images/visa.png";
 import mobile from "../../assests/images/mobile.png";
 import googleplay from "../../assests/images/google-play.png";
 import appstore from "../../assests/images/app-store.png";
+import cat1 from "../../assests/images/cat1.png";
+import cat2 from "../../assests/images/cat2.png";
+import cat3 from "../../assests/images/cat3.png";
+import cat4 from "../../assests/images/cat4.png";
+import cat5 from "../../assests/images/cat5.png";
 import {slidedata} from '../../slidesData'
+import { customerSlide } from "../../slidesData";
 
 import {
   MdOutlineKeyboardArrowDown,
@@ -22,6 +28,7 @@ import {
 import { FaLocationArrow } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
 import DishSwipper from "../../compnents/DishesSwiper/DishSwipper";
+import CustomerSwiper from "../../compnents/CustomerSwiper/CustomerSwiper";
 
 
 const Home = () => {
@@ -29,11 +36,35 @@ const Home = () => {
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
+  const catgImages = [
+    {
+      id:1,
+      image : cat2,
+      title:"Master Chiefs"
+    },
+    {
+      id:2,
+      image : cat3,
+      title:"Desserts"
+    },
+    {
+      id:1,
+      image : cat4,
+      title:"Events"
+
+    },
+    {
+      id:1,
+      image : cat5,
+      title:"Birtdays"
+    },
+  ]
   return (
     <>
     {/* Hero section starts */}
       <section className={styles.banner_section}>
-        {/* <Container> */}
+        
+        <Container>
           <Row>
             <Col md={6} sm={12}>
               <div className={styles.hero_main}>
@@ -161,7 +192,7 @@ const Home = () => {
               </div>
             </Col>
           </Row>
-        {/* </Container> */}
+        </Container>
       </section>
     {/* Hero section ends */}
 
@@ -169,6 +200,7 @@ const Home = () => {
 {/* Second section starts */}
 
 <section className={styles.sectTwo}>
+  <Container>
     <Row>
         <Col md={3}>
             <div className={styles.mobileImg_Wrapper}>
@@ -185,13 +217,15 @@ const Home = () => {
             </div>
         </Col>
     </Row>
-
+    </Container>
 </section>
 {/* Second section ends */}
 
 
 {/* Third Section starts */}
 <section className={styles.thirdSect}>
+  <Container>
+
     <Row>
         <Col md={3}>
             <div className={styles.popular_sidhes_heading}>
@@ -201,7 +235,7 @@ const Home = () => {
                     </span> 
                   This Month
                   </h3>
-                    
+                    <a className={styles.primary_btn}>See all</a>
             </div>
 
         </Col>
@@ -209,20 +243,67 @@ const Home = () => {
             <DishSwipper slidedata={slidedata}/>
         </Col>
     </Row>
+  </Container>
 </section>
 {/* Third Section ends */}
 
 
 
 {/* Section four starts */}
-<section className={styles.ategories}>
+<section className={styles.categories_section}>
+  <Container >
+  <div className={styles.catgHeading}>
+  <h3>Browse by <span style={{color:"#FF9E2C"}}>Categories</span></h3>
+
+  </div>
 <Row>
   <Col md={6} sm={12}>
+    <div className={styles.catg_img_large}>
+       <img src={cat1} alt="cat1" className="img-fluid" />
+    </div>
   </Col>
-  <Col md={6} sm={12}></Col>
+  <Col md={6} sm={12}>
+    <Row>
+      {
+        catgImages.map((catImg)=>(
+            <Col md={6} sm={12}>
+          <div className={styles.catg_imgs}>
+            <img src={catImg.image} alt="" className="img-fluid" />
+            <h6>{catImg.title}</h6>
+      </div>
+    </Col>
+        ))
+      }
+         
+    </Row>
+  </Col>
 </Row>
+</Container>
 </section>
 {/* Section four ends */}
+
+
+{/* Customers sexction starts */}
+<section className={styles.customerSection}> 
+  <Container>
+    <Row>
+      <Col>
+      <h2>What our
+        <span style={{color:"#FF9E2C", marginLeft:'13px', marginRight:'13px'}}>
+         Customers 
+        </span>
+         says</h2>
+      </Col>
+      <Col>
+      <CustomerSwiper 
+      customerSlide={customerSlide}
+      />
+      </Col>
+    </Row>
+  </Container>
+</section>
+{/* Customers sexction ends */}
+
 
     </>
   );

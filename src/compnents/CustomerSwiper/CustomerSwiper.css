@@ -1,0 +1,37 @@
+.customerSwiper{
+    width: 100%;
+    /* height: 500px; */
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+.swipperBtn{
+    display: none;
+}
+.swiperImgss{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+}
+.swiperImgss img{
+    width: 100%;
+    height: 100%;
+}
+.desription_para{
+    padding-top: 30px;
+}
+.slideDecrpt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.startRatess{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 30px;
+    gap: 8px;
+}

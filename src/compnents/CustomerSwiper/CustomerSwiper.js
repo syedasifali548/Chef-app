@@ -1,20 +1,28 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
 import "swiper/swiper-bundle.min.css";
-import "./DishSwipper.css";
+import "./CustomerSwiper.css";
 import ReactStars from "react-rating-stars-component";
-
-const DishSwipper = ({ slidedata }) => {
-    const ratingChanged=()=>{}
+const CustomerSwiper = ({customerSlide}) => {
+  const swiper = useSwiper()
+  const ratingChanged=()=>{}
   return (
     <>
-      <Swiper
+    {/* <button onClick={() => swiper.slideNext()}></button> */}
+     <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={30}
         slidesPerView={3}
-        spaceBetween={50}
-        pagination={{
-          clickable: true,
+        // navigation
+        navigation={{
+          nextEl: ".image-swiper-button-next",
+          prevEl: ".image-swiper-button-prev",
+          disabledClass: "swiper-button-disabled"
         }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
         breakpoints={{
           // when window width is >= 320px
           320: {
@@ -41,20 +49,23 @@ const DishSwipper = ({ slidedata }) => {
             spaceBetween: 32,
           },
         }}
-        modules={[Pagination]}
-        className="mySwiper"
+
+
+
       >
-        {slidedata?.map((slide) => (
+        {customerSlide?.map((slide) => (
           <SwiperSlide key={slide.image}>
-            <div className="imagesSlide_wrapper">
-              <img src={slide.image} alt={slide.title} />
-              <h6>{slide.title}</h6>
-              <p>{slide.subTitle}</p>
-              <h5>{slide.interval}</h5>
-              <div className="sliderFooter">
-                <img src={slide.image1} alt={slide.title} />
-                <p className="small">{slide.chefName}</p>
-                <div className="startRate">
+            <div className="customerSwiper">
+              <div className="swiperImgss">
+              <img src={slide.image} alt="" />
+              <div className="slideDecrpt">
+              <h6>{slide.name}</h6>
+              <p>{slide.position}</p>
+              </div>
+              </div>
+              <p className="desription_para">{slide.description}</p>
+              <div className="sliderFooters">
+                <div className="startRatess">
                 <ReactStars
                   count={1}
                   onChange={ratingChanged}
@@ -66,11 +77,12 @@ const DishSwipper = ({ slidedata }) => {
                 </div>
               </div>
             </div>
+            {/* <button className="swipperBtn" onClick={()=>swiper}></button> */}
           </SwiperSlide>
         ))}
       </Swiper>
     </>
-  );
-};
+  )
+}
 
-export default DishSwipper;
+export default CustomerSwiper

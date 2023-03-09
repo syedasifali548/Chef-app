@@ -11,23 +11,23 @@
 }
 @font-face {
   font-family: Gilroy-Bold;
-  src: url(./assests/fonts/Gilroy-Bold.ttf);
+  src: url("./assests/fonts/Gilroy-Bold.ttf");
 }
 @font-face {
   font-family: Gilroy-Heavy;
-  src: url(./assests/fonts/Gilroy-Heavy.ttf);
+  src: url("./assests/fonts/Gilroy-Heavy.ttf");
 }
 @font-face {
   font-family: Gilroy-Light;
-  src: url(./assests/fonts/Gilroy-Light.ttf);
+  src: url("./assests/fonts/Gilroy-Light.ttf");
 }
 @font-face {
   font-family: Gilroy-Medium;
-  src: url(./assests/fonts/Gilroy-Medium.ttf
+  src: url("./assests/fonts/Gilroy-Medium.ttf")
 }
 @font-face {
   font-family: Gilroy-Regular;
-  src: url(./assests/fonts/Gilroy-Regular.ttf);
+  src: url("./assests/fonts/Gilroy-Regular.ttf");
 }
 
 h1{
